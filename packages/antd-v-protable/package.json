@@ -3,9 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "@suite-kit/hooks": "*"
-  },
-  "devDependencies": {
-    "vue": "^3.3.4"
+    "@suite-kit/hooks": "workspace:^"
   }
 }

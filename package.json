@@ -17,23 +17,22 @@
 	},
 	"devDependencies": {
 		"@turbo/gen": "^1.9.7",
+		"@vitejs/plugin-vue": "^4.2.3",
+		"@vitejs/plugin-vue-jsx": "^3.0.1",
 		"cz-git": "^1.7.1",
 		"czg": "^1.7.1",
 		"eslint": "^7.32.0",
 		"prettier": "^2.5.1",
 		"standard-version": "^9.5.0",
-		"turbo": "^1.10.7"
+		"turbo": "^1.10.7",
+		"typescript": "^5.1.6",
+		"vite": "^5.1.6",
+		"vite-plugin-dts": "^3.3.1"
 	},
-	"packageManager": "yarn@1.22.18",
-	"workspaces": [
-		"docs",
-		"packages/*",
-		"play"
-	],
+	"packageManager": "pnpm@8.15.4",
 	"dependencies": {
 		"@changesets/cli": "^2.26.2",
-		"vite": "^4.4.1",
-		"vue": "^3.3.4"
+		"vue": "^3.4.21"
 	},
 	"config": {
 		"commitizen": {

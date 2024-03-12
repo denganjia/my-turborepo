@@ -24,11 +24,6 @@
   },
   "dependencies": {
     "@suite-kit/hooks": "*",
-    "naive-ui": "^2.35.0",
-    "vue": "^3.3.4"
-  },
-  "devDependencies": {
-    "vite": "^4.4.3",
-    "vite-plugin-dts": "^3.3.1"
+    "naive-ui": "^2.35.0"
   }
 }
