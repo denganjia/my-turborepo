@@ -1,12 +1,34 @@
 {
   "name": "@suite-kit/n-protable",
-  "private": true,
   "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/denganjia/suite-kit.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
+  "scripts": {
+    "build": "vite build"
+  },
   "dependencies": {
     "@suite-kit/hooks": "*",
-    "naive-ui": "^2.35.0"
+    "naive-ui": "^2.35.0",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "vue": "^3.3.4"
+    "vite": "^4.4.3",
+    "vite-plugin-dts": "^3.3.1"
   }
 }
