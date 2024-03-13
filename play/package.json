@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@suite-kit/el-protable": "*",
+    "suite-kit": "workspace:^",
     "element-plus": "^2.3.8"
   },
   "devDependencies": {
