@@ -9,6 +9,7 @@
 		"dev:docs": "turbo run build --filter=./packages/* && turbo run dev --filter=docs",
 		"build:docs": "turbo run build --filter=docs",
 		"build:grid": "turbo run build --filter=@suite-kit/grid",
+		"build:packages":"turbo run build --filter=./packages/*",
 		"build:el-protable": "turbo run build --filter=@suite-kit/el-protable",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"publish-packages": "turbo run lint build --filter=./packages/* && changeset version && changeset publish",
@@ -17,6 +18,7 @@
 	},
 	"devDependencies": {
 		"@turbo/gen": "^1.9.7",
+		"@types/node": "^20.11.26",
 		"@vitejs/plugin-vue": "^4.2.3",
 		"@vitejs/plugin-vue-jsx": "^3.0.1",
 		"cz-git": "^1.7.1",

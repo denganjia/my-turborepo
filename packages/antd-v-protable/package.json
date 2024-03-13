@@ -4,5 +4,9 @@
   "version": "0.0.0",
   "dependencies": {
     "@suite-kit/hooks": "workspace:^"
+  },
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "vite build"
   }
 }

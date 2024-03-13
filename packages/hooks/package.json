@@ -1,7 +1,10 @@
 {
-	"name": "@suite-kit/hooks",
-	"type": "module",
-	"version": "0.0.0",
-	"main": "./index",
-	"repository": "https://github.com/denganjia/suite-kit.git"
+  "name": "@suite-kit/hooks",
+  "type": "module",
+  "version": "0.0.0",
+  "main": "./src/index",
+  "repository": "https://github.com/denganjia/suite-kit.git",
+  "scripts": {
+    "build": "vite build"
+  }
 }

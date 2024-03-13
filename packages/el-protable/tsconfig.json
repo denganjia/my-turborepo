@@ -1,8 +1,0 @@
-{
-	"compilerOptions": {
-		"jsx": "preserve",
-		"outDir": "dist"
-	},
-	"include": ["./*.ts", "src/*.vue", "components/**/*.vue"],
-	"extends": "../../tsconfig.json"
-}

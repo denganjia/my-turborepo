@@ -1,0 +1,20 @@
+// tsconfig.src.json
+{
+  // 继承基础配置
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    // 组件库依赖浏览器的 DOM API
+    "lib": [
+      "ESNext",
+      "DOM",
+    ],
+    "types": [
+      "node"
+    ],
+  },
+  "include": [
+    "typings/env.d.ts",
+    "packages/**/src"
+  ]
+}

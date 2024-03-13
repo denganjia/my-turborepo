@@ -1,0 +1,1 @@
+export { default as NProTable } from "./index.vue"
