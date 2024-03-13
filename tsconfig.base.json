@@ -35,6 +35,7 @@
         "packages/*"
       ]
     },
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
   }
 }

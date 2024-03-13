@@ -54,6 +54,9 @@ importers:
       vite-plugin-dts:
         specifier: ^3.3.1
         version: 3.7.3(@types/node@20.11.26)(typescript@5.4.2)(vite@5.1.6)
+      vue-tsc:
+        specifier: ^1.8.3
+        version: 1.8.27(typescript@5.4.2)
 
   docs:
     dependencies:

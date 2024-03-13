@@ -12,6 +12,7 @@
     "types": [
       "node"
     ],
+    "skipLibCheck": true
   },
   "include": [
     "typings/env.d.ts",

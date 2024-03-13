@@ -9,7 +9,7 @@
 ## 运行示例项目
 
 ```sh
-yarn dev:play
+pnpm run dev:play
 ```
 
 ## 交流群
