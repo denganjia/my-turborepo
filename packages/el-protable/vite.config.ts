@@ -2,26 +2,26 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import { resolve } from "path";
-import dts from "vite-plugin-dts";
+// import dts from "vite-plugin-dts";
 export default defineConfig({
 	plugins: [
 		// @ts-ignore
-		dts({
-			copyDtsFiles: true,
-			outDir: [
-				"dist",
-				// "types",
-				// 'types/inner'
-			],
-			clearPureImport: false,
-			include: ["src/*", "src/types.ts"],
-			// staticImport: true,
-			// rollupTypes: true,
-			insertTypesEntry: true,
-			compilerOptions: {
-				// declarationMap: true,
-			},
-		}),
+		// dts({
+		// 	copyDtsFiles: true,
+		// 	outDir: [
+		// 		"dist",
+		// 		// "types",
+		// 		// 'types/inner'
+		// 	],
+		// 	clearPureImport: false,
+		// 	include: ["src/*", "src/types.ts"],
+		// 	// staticImport: true,
+		// 	// rollupTypes: true,
+		// 	insertTypesEntry: true,
+		// 	compilerOptions: {
+		// 		// declarationMap: true,
+		// 	},
+		// }),
 		// @ts-ignore
 		vueJsx(),
 		vue(),

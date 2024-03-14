@@ -9,12 +9,15 @@
 		"dev:docs": "turbo run build --filter=./packages/* && turbo run dev --filter=docs",
 		"build:docs": "turbo run build --filter=docs",
 		"build:grid": "turbo run build --filter=@suite-kit/grid",
-		"build:packages": "turbo run build --filter=./packages/*",
+		"build:packages": "pnpm run type:src && turbo run build --filter=./packages/* && pnpm run mv-type",
 		"build:el-protable": "turbo run build --filter=@suite-kit/el-protable",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"publish-packages": "turbo run lint build --filter=./packages/* && changeset version && changeset publish",
 		"release": "standard-version",
-		"cz": " git add . && czg"
+		"cz": " git add . && czg",
+		"clean:type": "rimraf ./dist",
+		"type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
+		"mv-type": "tsx ./scripts/moveDTS.ts"
 	},
 	"devDependencies": {
 		"@turbo/gen": "^1.9.7",
@@ -25,7 +28,9 @@
 		"czg": "^1.7.1",
 		"eslint": "^7.32.0",
 		"prettier": "^2.5.1",
+		"rimraf": "^5.0.5",
 		"standard-version": "^9.5.0",
+		"tsx": "^4.7.1",
 		"turbo": "^1.10.7",
 		"typescript": "^5.1.6",
 		"vite": "^5.1.6",
