@@ -1,5 +1,11 @@
 <template>
-  <ElProTable :request-api="fetchData" :columns="columns" :data-callback="dataCallback" title="用户信息表">
+  <ElProTable
+    :request-api="fetchData"
+    :columns="columns"
+    :data-callback="dataCallback"
+    title="用户信息表"
+    ref="tableRef"
+  >
     <template #action>
       <el-button type="warning" @click="changeEnum">警告</el-button>
     </template>
@@ -13,13 +19,15 @@ import { ElButton } from "element-plus";
 defineOptions({
   name: "Test-El-ProTable",
 });
-
+const tableRef = ref<ProTableInstance>();
 const dataCallback = (data: any) => {
   console.log(data);
   return data;
 };
 
 const changeEnum = () => {
+  console.log(tableRef.value);
+
   enumGender.value.length = 0;
   enumGender.value.push(
     ...[
