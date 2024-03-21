@@ -1,6 +1,7 @@
 import type { UnwrapRef } from "vue";
 import "./index.scss";
 import { TableInstance } from "element-plus";
+export { default as ElProTable } from "./index.vue"
 
 export * from "./types";
 export type ProTableInstance = {
@@ -24,4 +25,3 @@ export type ProTableInstance = {
   selectedList: UnwrapRef<{ [key: string]: any }[]>,
   selectedListIds: UnwrapRef<string[]>,
 }
-export { default as ElProTable } from "./index.vue"

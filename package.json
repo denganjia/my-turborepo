@@ -12,11 +12,12 @@
 		"build:packages": "pnpm run type:src && turbo run build --filter=./packages/* && pnpm run mv-type",
 		"build:el-protable": "turbo run build --filter=@suite-kit/el-protable",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"publish-packages": "turbo run lint build --filter=./packages/* && changeset version && changeset publish",
+		"publish-packages": "pnpm run build:packages && changeset version && changeset publish",
 		"release": "standard-version",
 		"cz": " git add . && czg",
 		"clean:type": "rimraf ./dist",
-		"type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
+		"gen:type":"vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
+		"type:src": "pnpm run clean:type && pnpm run gen:type",
 		"mv-type": "tsx ./scripts/moveDTS.ts"
 	},
 	"devDependencies": {

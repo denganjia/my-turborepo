@@ -1,7 +1,7 @@
 {
   "name": "@suite-kit/hooks",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./src/index",
   "repository": "https://github.com/denganjia/suite-kit.git",
   "scripts": {

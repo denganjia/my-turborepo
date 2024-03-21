@@ -8,9 +8,12 @@
 							<template #label>
 								<el-space :size="0">
 									<span>{{ item.label }}</span>
-									<el-tooltip v-if="item.search?.tip ?? item.tip">
+									<el-tooltip v-if="!!item.search?.tip || !!item.tip">
 										<template #content>
-											<component :is="item.search?.tip ?? item.tip ?? ''"></component>
+											<component v-if="typeof item.search?.tip === 'function'" :is="item.search.tip"></component>
+											<span v-else-if="typeof item.search?.tip === 'string'">{{ item.search?.tip }}</span>
+											<component v-else-if="typeof item.tip === 'function'" :is="item.tip" ></component>
+											<span v-else>{{ item.tip }}</span>
 										</template>
 										<el-button style="padding: 0" :icon="QuestionFilled" link></el-button>
 									</el-tooltip>
@@ -55,7 +58,6 @@ interface Props {
 	search: (params: any) => void; // 搜索方法
 	reset: (params: any) => void; // 重置方法
 }
-
 // 默认值
 const props = withDefaults(defineProps<Props>(), {
 	columns: () => [],

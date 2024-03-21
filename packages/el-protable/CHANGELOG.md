@@ -1,5 +1,15 @@
 # @suite-kit/el-protable
 
+## 0.0.7
+
+### Patch Changes
+
+- Update architecture, optimize TS types, fix errors
+- Updated dependencies
+  - @suite-kit/hooks@0.0.1
+  - @suite-kit/utils@0.0.1
+  - @suite-kit/grid@0.0.1
+
 ## 0.0.6
 
 ### Patch Changes

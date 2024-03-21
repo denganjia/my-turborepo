@@ -1,44 +1,45 @@
 {
-	"name": "@suite-kit/el-protable",
-	"version": "0.0.6",
-	"type": "module",
-	"repository": {
-		"url": "https://github.com/denganjia/suite-kit.git"
-	},
-	"homepage": "https://suite-kit.chiyu.site/components/Element/ProTable.html",
-	"files": [
-		"dist"
-	],
-	"module": "./dist/index.js",
-	"exports": {
-		".": {
-			"import": "./dist/index.js",
-			"require": "./dist/index.umd.js",
-			"types": "./dist/index.d.ts"
-		},
-		"./*": "./*"
-	},
-	"types": "./dist/index.d.ts",
-	"style": "./dist/style.css",
-	"scripts": {
-		"build": "vite build"
-	},
-	"dependencies": {
-		"@element-plus/icons-vue": "^2.3.1",
-		"@suite-kit/grid": "workspace:^",
-		"@suite-kit/hooks": "workspace:^",
-		"@suite-kit/utils": "workspace:^",
-		"@vueuse/core": "^10.2.1",
-		"@vueuse/integrations": "^10.2.1",
-		"element-plus": "^2.3.7",
-		"lodash": "^4.17.21",
-		"print-js": "^1.6.0",
-		"sortablejs": "^1.15.0"
-	},
-	"devDependencies": {
-		"@types/sortablejs": "^1.15.1"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@suite-kit/el-protable",
+  "version": "0.0.7",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/denganjia/suite-kit.git"
+  },
+  "homepage": "https://suite-kit.chiyu.site/components/Element/ProTable.html",
+  "files": [
+    "dist"
+  ],
+  "main": "./src/index.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@suite-kit/grid": "workspace:^",
+    "@suite-kit/hooks": "workspace:^",
+    "@suite-kit/utils": "workspace:^",
+    "@vueuse/core": "^10.2.1",
+    "@vueuse/integrations": "^10.2.1",
+    "element-plus": "^2.3.7",
+    "lodash": "^4.17.21",
+    "print-js": "^1.6.0",
+    "sortablejs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/sortablejs": "^1.15.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
