@@ -3,7 +3,7 @@
   "description": "A suite of tools for building web applications.",
   "type": "module",
   "main": "./src/index.ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "@suite-kit/a-protable": "workspace:^",
     "@suite-kit/el-protable": "workspace:^",
@@ -14,5 +14,13 @@
   },
   "scripts": {
     "build": "vite build"
+  },
+  "peerDependencies": {
+    "@suite-kit/a-protable": "workspace:^",
+    "@suite-kit/el-protable": "workspace:^",
+    "@suite-kit/grid": "workspace:^",
+    "@suite-kit/hooks": "workspace:^",
+    "@suite-kit/n-protable": "workspace:^",
+    "@suite-kit/utils": "workspace:^"
   }
 }
