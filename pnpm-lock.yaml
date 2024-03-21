@@ -42,6 +42,9 @@ importers:
       rimraf:
         specifier: ^5.0.5
         version: 5.0.5
+      sass:
+        specifier: ^1.63.6
+        version: 1.71.1
       standard-version:
         specifier: ^9.5.0
         version: 9.5.0

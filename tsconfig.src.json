@@ -15,7 +15,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "typings/env.d.ts",
+    "types/env.d.ts",
     "packages/**/src"
   ]
 }

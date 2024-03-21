@@ -2,9 +2,19 @@
   "name": "@suite-kit/hooks",
   "type": "module",
   "version": "0.0.1",
-  "main": "./src/index",
   "repository": "https://github.com/denganjia/suite-kit.git",
   "scripts": {
     "build": "vite build"
-  }
+  },
+  "main": "./src/index.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "types": "./dist/index.d.ts"
 }
