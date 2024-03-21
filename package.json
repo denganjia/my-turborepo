@@ -12,7 +12,7 @@
 		"build:packages": "pnpm run type:src && turbo run build --filter=./packages/* && pnpm run mv-type",
 		"build:el-protable": "turbo run build --filter=@suite-kit/el-protable",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"publish-packages": "pnpm run build:packages && changeset version && changeset publish",
+		"publish-packages": "pnpm run build:packages && changeset && changeset version && changeset publish",
 		"release": "standard-version",
 		"cz": " git add . && czg",
 		"clean:type": "rimraf ./dist",

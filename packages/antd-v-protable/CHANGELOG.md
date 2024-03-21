@@ -1,5 +1,11 @@
 # @suite-kit/a-protable
 
+## 0.0.3
+
+### Patch Changes
+
+- change type to 'module'
+
 ## 0.0.2
 
 ### Patch Changes

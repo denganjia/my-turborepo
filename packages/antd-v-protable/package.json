@@ -1,6 +1,7 @@
 {
   "name": "@suite-kit/a-protable",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "type": "module",
   "dependencies": {
     "@suite-kit/hooks": "workspace:^"
   },

@@ -3,7 +3,7 @@
   "description": "A suite of tools for building web applications.",
   "type": "module",
   "main": "./src/index.ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "@suite-kit/a-protable": "workspace:^",
     "@suite-kit/el-protable": "workspace:^",
