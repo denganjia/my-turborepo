@@ -19,7 +19,7 @@
     },
     "./*": "./*"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./src/index.ts",
   "style": "./dist/style.css",
   "scripts": {
     "build": "vite build"

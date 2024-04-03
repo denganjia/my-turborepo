@@ -13,7 +13,7 @@
 		},
 		"./*": "./*"
 	},
-	"types": "./dist/index.d.ts",
+	"types": "./src/index.ts",
 	"scripts": {
 		"build": "vite build"
 	},
