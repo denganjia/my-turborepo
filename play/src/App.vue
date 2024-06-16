@@ -5,6 +5,9 @@
 				<ElProTable></ElProTable>
 			</ElConfigProvider>
 		</el-tab-pane>
+		<el-tab-pane label="ReplaceEnum" name = "EnumTest">
+			<EnumTest/>
+		</el-tab-pane>
 		<el-tab-pane label="Grid" name="Grid">
 			<Grid></Grid>
 		</el-tab-pane>
@@ -12,6 +15,7 @@
 </template>
 <script setup lang="ts">
 import ElProTable from "./components/ElProTable.vue";
+import EnumTest from "./components/EnumTest.vue"
 import Grid from "./components/Grid.vue";
 import { ElTabs, ElTabPane, ElConfigProvider } from "element-plus";
 import { ref } from "vue";
