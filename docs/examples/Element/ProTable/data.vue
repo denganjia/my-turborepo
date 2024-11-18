@@ -1,11 +1,11 @@
 <template>
 	<div class="table">
-		<ProTable :columns="columns" :data="data"></ProTable>
+		<ElProTable :columns="columns" :data="data"></ElProTable>
 	</div>
 </template>
 
 <script setup lang="ts">
-import ProTable, { ColumnProps } from "@suite-kit/el-protable";
+import {ElProTable, ColumnProps } from "@suite-kit/el-protable";
 import { dayjs } from "element-plus";
 
 const data = Array(20)

@@ -1,11 +1,12 @@
 {
   "name": "@suite-kit/a-protable",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.3",
+  "type": "module",
   "dependencies": {
-    "@suite-kit/hooks": "*"
+    "@suite-kit/hooks": "workspace:^"
   },
-  "devDependencies": {
-    "vue": "^3.3.4"
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "vite build"
   }
 }

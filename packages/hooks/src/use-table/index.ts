@@ -1,4 +1,4 @@
-import { reactive, computed, toRefs, onBeforeMount } from "vue";
+import { reactive, computed, toRefs } from "vue";
 
 export declare namespace Table {
 	export interface Pageable {

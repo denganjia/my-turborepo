@@ -1,6 +1,6 @@
 <template>
 	<div class="table">
-		<ProTable :columns="columns" :request-api="getDataApi">
+		<ElProTable :columns="columns" :request-api="getDataApi">
 			<template #title>表格标题，也可使用title属性</template>
 			<template #action>
 				<el-button type="primary">表格操作区</el-button>
@@ -14,12 +14,12 @@
 			<template #operation>
 				<el-button link type="danger">删除</el-button>
 			</template>
-		</ProTable>
+		</ElProTable>
 	</div>
 </template>
 
 <script setup lang="ts">
-import ProTable, { ColumnProps } from "@suite-kit/el-protable";
+import {ElProTable, ColumnProps } from "@suite-kit/el-protable";
 import { getDataApi } from "../../../fetch";
 import { dayjs, ElButton } from "element-plus";
 

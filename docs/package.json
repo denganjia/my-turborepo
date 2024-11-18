@@ -11,6 +11,7 @@
 		"@suite-kit/el-protable": "*",
 		"@suite-kit/grid": "*",
 		"@turbo/gen": "^1.9.7",
+		"@vueuse/core": "^10.2.1",
 		"consola": "^3.2.3",
 		"element-plus": "^2.3.9",
 		"escape-html": "^1.0.3",
@@ -30,7 +31,7 @@
 		"markdown-it-container": "^3.0.0",
 		"sass": "^1.63.6",
 		"unplugin-vue-components": "^0.25.1",
-		"vitepress": "^1.0.0-rc.4",
-		"vite": "^4.4.1"
+		"vite": "^4.4.1",
+		"vitepress": "^1.0.0-rc.4"
 	}
 }

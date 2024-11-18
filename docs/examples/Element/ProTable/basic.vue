@@ -1,11 +1,11 @@
 <template>
   <div class="table">
-    <ProTable :columns="columns" :request-api="getDataApi"></ProTable>
+    <ElProTable :columns="columns" :request-api="getDataApi"></ElProTable>
   </div>
 </template>
 
 <script setup lang="ts">
-import ProTable, { ColumnProps } from "@suite-kit/el-protable";
+import {ElProTable, ColumnProps } from "@suite-kit/el-protable";
 import { getDataApi } from "../../../fetch";
 import { dayjs } from "element-plus";
 

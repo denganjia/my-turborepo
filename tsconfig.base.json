@@ -1,0 +1,41 @@
+// tsconfig.base.json
+{
+  "compilerOptions": {
+    // tsc 编译产物输出目录
+    "outDir": "dist",
+    // 编译目标 js 的版本
+    "target": "es2018",
+    // 设置程序的模块系统
+    "module": "esnext",
+    // 项目基础目录
+    "baseUrl": ".",
+    // 是否生成辅助 debug 的 .map.js 文件
+    "sourceMap": false,
+    // 模块解析策略
+    "moduleResolution": "node",
+    "allowJs": false,
+    // 严格模式类型检查，建议开启
+    "strict": true,
+    // 不允许有未使用的变量
+    "noUnusedLocals": true,
+    // 允许引入 .json 模块
+    "resolveJsonModule": true,
+    // 与 esModuleInterop 配合允许从 commonjs 的依赖中直接按 import XX from 'xxx' 的方式引入 default 模块
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    // 产物不消除注释
+    "removeComments": false,
+    // 项目的根目录
+    "rootDir": ".",
+    // 默认引入的模块类型声明
+    "types": [],
+    // 路径别名设置
+    "paths": {
+      "@suite-kit/*": [
+        "packages/*"
+      ]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
+  }
+}

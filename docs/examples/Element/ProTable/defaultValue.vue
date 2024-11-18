@@ -1,11 +1,11 @@
 <template>
 	<div class="table">
-		<ProTable :columns="columns" :request-api="getDataApi" :request-auto="false" ref="table"></ProTable>
+		<ElProTable :columns="columns" :request-api="getDataApi" :request-auto="false" ref="table"></ElProTable>
 	</div>
 </template>
 
 <script setup lang="ts">
-import ProTable,{ ColumnProps, ProTableInstance } from "@suite-kit/el-protable";
+import {ElProTable, ColumnProps, ProTableInstance } from "@suite-kit/el-protable";
 import { getDataApi } from "../../../fetch";
 import { ref, watch } from "vue";
 const table = ref<ProTableInstance>();

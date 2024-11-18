@@ -1,8 +1,27 @@
-import { ComponentPublicInstance } from "vue";
-import ProTable from "./index.vue";
-import { ProTableProps } from "./types";
+import type { UnwrapRef } from "vue";
 import "./index.scss";
+import { TableInstance } from "element-plus";
+export { default as ElProTable } from "./index.vue"
 
-export default ProTable;
 export * from "./types";
-export type ProTableInstance = Omit<InstanceType<typeof ProTable>, keyof ComponentPublicInstance | keyof ProTableProps>;
+export type ProTableInstance = {
+  element: UnwrapRef<TableInstance>,
+  tableData: UnwrapRef<any[]>,
+  pageable: UnwrapRef<{
+    pageNum: number;
+    pageSize: number;
+    total: number;
+  }>,
+  searchParam: UnwrapRef<{ [key: string]: any }>,
+  searchInitParam: UnwrapRef<{ [key: string]: any }>,
+  getTableList: () => Promise<void>,
+  search: () => void,
+  reset: () => void,
+  handleSizeChange: (val: number) => void,
+  handleCurrentChange: (val: number) => void,
+  clearSelection: () => void,
+  enumMap: UnwrapRef<Map<string, { [key: string]: any }[]>>,
+  isSelected: UnwrapRef<boolean>,
+  selectedList: UnwrapRef<{ [key: string]: any }[]>,
+  selectedListIds: UnwrapRef<string[]>,
+}
