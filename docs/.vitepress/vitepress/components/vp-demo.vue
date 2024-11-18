@@ -34,9 +34,9 @@ const formatPathDemos = computed(() => {
   const demos = {};
   Object.keys(props.demos).forEach((key) => {
     demos[key.replace("../../examples/", "").replace(".vue", "")] =
-      props.demos[key].default;
+      props.demos[key];
   });
-
+  console.log(demos, props.path);
   return demos;
 });
 
@@ -67,70 +67,70 @@ const copyCode = async () => {
 
 <template>
   <!-- <ClientOnly> -->
-    <!-- danger here DO NOT USE INLINE SCRIPT TAG -->
-    <p text="sm" v-html="decodedDescription" />
-    <div class="example">
-      <Example :file="path" :demo="formatPathDemos[path]" />
-      <ElDivider class="m-0" />
-      <div class="op-btns">
-        <ElTooltip
-          :content="'copy-code'"
-          :show-arrow="false"
-          :trigger="['hover', 'focus']"
-          :trigger-keys="[]"
-        >
-          <ElIcon
-            :size="16"
-            :aria-label="'copy-code'"
-            class="op-btn"
-            tabindex="0"
-            role="button"
-            @click="copyCode"
-            @keydown.prevent.enter="copyCode"
-            @keydown.prevent.space="copyCode"
-          >
-            <CopyDocument></CopyDocument>
-          </ElIcon>
-        </ElTooltip>
-        <ElTooltip
-          :content="'view-source'"
-          :show-arrow="false"
-          :trigger="['hover', 'focus']"
-          :trigger-keys="[]"
-        >
-          <button
-            ref="sourceCodeRef"
-            :aria-label="sourceVisible ? 'hide-source' : 'view-source'"
-            class="reset-btn el-icon op-btn"
-            @click="toggleSourceVisible()"
-          >
-            <ElIcon :size="16">
-              <Hide></Hide>
-            </ElIcon>
-          </button>
-        </ElTooltip>
-      </div>
-
-      <ElCollapseTransition>
-        <SourceCode v-show="sourceVisible" :source="source" />
-      </ElCollapseTransition>
-
-      <Transition name="el-fade-in-linear">
-        <div
-          v-show="sourceVisible"
-          class="example-float-control"
+  <!-- danger here DO NOT USE INLINE SCRIPT TAG -->
+  <p text="sm" v-html="decodedDescription" />
+  <div class="example">
+    <Example :file="path" :demo="formatPathDemos[path]" />
+    <ElDivider class="m-0" />
+    <div class="op-btns">
+      <ElTooltip
+        :content="'copy-code'"
+        :show-arrow="false"
+        :trigger="['hover', 'focus']"
+        :trigger-keys="[]"
+      >
+        <ElIcon
+          :size="16"
+          :aria-label="'copy-code'"
+          class="op-btn"
           tabindex="0"
           role="button"
-          @click="toggleSourceVisible(false)"
-          @keydown="onSourceVisibleKeydown"
+          @click="copyCode"
+          @keydown.prevent.enter="copyCode"
+          @keydown.prevent.space="copyCode"
+        >
+          <CopyDocument></CopyDocument>
+        </ElIcon>
+      </ElTooltip>
+      <ElTooltip
+        :content="'view-source'"
+        :show-arrow="false"
+        :trigger="['hover', 'focus']"
+        :trigger-keys="[]"
+      >
+        <button
+          ref="sourceCodeRef"
+          :aria-label="sourceVisible ? 'hide-source' : 'view-source'"
+          class="reset-btn el-icon op-btn"
+          @click="toggleSourceVisible()"
         >
           <ElIcon :size="16">
-            <CaretTop />
+            <Hide></Hide>
           </ElIcon>
-          <span>{{ "hide-source" }}</span>
-        </div>
-      </Transition>
+        </button>
+      </ElTooltip>
     </div>
+
+    <ElCollapseTransition>
+      <SourceCode v-show="sourceVisible" :source="source" />
+    </ElCollapseTransition>
+
+    <Transition name="el-fade-in-linear">
+      <div
+        v-show="sourceVisible"
+        class="example-float-control"
+        tabindex="0"
+        role="button"
+        @click="toggleSourceVisible(false)"
+        @keydown="onSourceVisibleKeydown"
+      >
+        <ElIcon :size="16">
+          <CaretTop />
+        </ElIcon>
+        <span>{{ "hide-source" }}</span>
+      </div>
+    </Transition>
+  </div>
   <!-- </ClientOnly> -->
 </template>
 

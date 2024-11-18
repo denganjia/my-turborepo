@@ -1,11 +1,11 @@
 <template>
 	<div class="table">
-		<ProTable :columns="columns" :request-api="getDataApi"></ProTable>
+		<ElProTable :columns="columns" :request-api="getDataApi"></ElProTable>
 	</div>
 </template>
 
 <script setup lang="tsx">
-import ProTable, { ColumnProps, SearchRenderScope } from "@suite-kit/el-protable";
+import {ElProTable, ColumnProps ,SearchRenderScope} from "@suite-kit/el-protable";
 import { getDataApi } from "../../../fetch";
 import { dayjs, ElAutocomplete } from "element-plus";
 import { onMounted, ref } from "vue";
